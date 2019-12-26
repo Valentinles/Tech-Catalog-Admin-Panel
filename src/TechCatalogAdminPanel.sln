@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechCatalogAdminPanel.Web", "TechCatalogAdminPanel.Web\TechCatalogAdminPanel.Web.csproj", "{F64CD9D6-A11F-47C9-9B7E-9E8E28ECF5CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechCatalogAdminPanel.Data", "TechCatalogAdminPanel.Data\TechCatalogAdminPanel.Data.csproj", "{7AC3BEDD-70C6-42AA-990A-9AAAC0DB0F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechCatalogAdminPanel.Models", "TechCatalogAdminPanel.Models\TechCatalogAdminPanel.Models.csproj", "{3007279A-99FC-4186-8399-152F86956A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechCatalogAdminPanel.Services", "TechCatalogAdminPanel.Services\TechCatalogAdminPanel.Services.csproj", "{5A2F0CAC-6F66-491A-B1F2-3797EB6F4DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechCatalogAdminPanel.Common", "TechCatalogAdminPanel.Common\TechCatalogAdminPanel.Common.csproj", "{3D32D2F6-451F-4C71-9E89-FA59ED990918}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechCatalogAdminPanel.Tests", "TechCatalogAdminPanel.Tests\TechCatalogAdminPanel.Tests.csproj", "{91223277-0B25-4841-B6C2-BF24172D2FC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F64CD9D6-A11F-47C9-9B7E-9E8E28ECF5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64CD9D6-A11F-47C9-9B7E-9E8E28ECF5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64CD9D6-A11F-47C9-9B7E-9E8E28ECF5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64CD9D6-A11F-47C9-9B7E-9E8E28ECF5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC3BEDD-70C6-42AA-990A-9AAAC0DB0F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC3BEDD-70C6-42AA-990A-9AAAC0DB0F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC3BEDD-70C6-42AA-990A-9AAAC0DB0F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC3BEDD-70C6-42AA-990A-9AAAC0DB0F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3007279A-99FC-4186-8399-152F86956A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3007279A-99FC-4186-8399-152F86956A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3007279A-99FC-4186-8399-152F86956A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3007279A-99FC-4186-8399-152F86956A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A2F0CAC-6F66-491A-B1F2-3797EB6F4DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2F0CAC-6F66-491A-B1F2-3797EB6F4DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2F0CAC-6F66-491A-B1F2-3797EB6F4DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2F0CAC-6F66-491A-B1F2-3797EB6F4DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D32D2F6-451F-4C71-9E89-FA59ED990918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D32D2F6-451F-4C71-9E89-FA59ED990918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D32D2F6-451F-4C71-9E89-FA59ED990918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D32D2F6-451F-4C71-9E89-FA59ED990918}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91223277-0B25-4841-B6C2-BF24172D2FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91223277-0B25-4841-B6C2-BF24172D2FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91223277-0B25-4841-B6C2-BF24172D2FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91223277-0B25-4841-B6C2-BF24172D2FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BDB4522-D342-40C3-83A3-C6015ACCD10C}
+	EndGlobalSection
+EndGlobal
