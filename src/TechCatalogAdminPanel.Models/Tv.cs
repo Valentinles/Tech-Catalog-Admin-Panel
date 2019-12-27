@@ -5,7 +5,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Models
 {
-    class Tv : Device
+    public class Tv : Device
     {
         public Resolution Resolution { get; set; }
 

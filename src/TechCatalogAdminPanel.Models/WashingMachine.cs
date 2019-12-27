@@ -5,7 +5,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Models
 {
-    public class WashingMachines : Device
+    public class WashingMachine : Device
     {
         public EnergyClass EnergyClass { get; set; }
 
