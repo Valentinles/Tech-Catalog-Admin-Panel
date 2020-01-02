@@ -5,7 +5,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Common.ViewModels
 {
-    public class MonitorsEditViewModel : BaseDeviceEditViewModel
+    public class MonitorEditViewModel : BaseDeviceEditViewModel
     {
         public string Contrast { get; set; }
 

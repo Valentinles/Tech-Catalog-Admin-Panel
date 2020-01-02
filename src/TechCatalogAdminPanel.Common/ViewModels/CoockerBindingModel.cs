@@ -5,7 +5,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Common.ViewModels
 {
-    public class CoockersBindingModel : BaseDeviceBindingModel
+    public class CoockerBindingModel : BaseDeviceBindingModel
     {
         public EnergyClass EnergyClass { get; set; }
 

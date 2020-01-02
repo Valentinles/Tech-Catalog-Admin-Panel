@@ -5,7 +5,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Common.ViewModels
 {
-    public class CoockersEditViewModel : BaseDeviceEditViewModel
+    public class CoockerEditViewModel : BaseDeviceEditViewModel
     {
         public EnergyClass EnergyClass { get; set; }
 
