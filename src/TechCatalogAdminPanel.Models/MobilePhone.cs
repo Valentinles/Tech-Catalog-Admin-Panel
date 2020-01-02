@@ -5,7 +5,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Models
 {
-    public class MobilePhones : Device
+    public class MobilePhone : Device
     {
         public string Processor { get; set; }
 

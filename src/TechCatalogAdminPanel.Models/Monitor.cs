@@ -5,11 +5,9 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Models
 {
-    public class Monitors : Device
+    public class Monitor : Device
     {
         public string Contrast { get; set; }
-
-        public int MyProperty { get; set; }
 
         public string DisplayType { get; set; }
 
