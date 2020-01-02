@@ -13,9 +13,9 @@ namespace TechCatalogAdminPanel.Data
         {
         }
 
-        public DbSet<AirConditioner> AirConditioners { get; set; }
+        public DbSet<AirConditioner> GameConsole { get; set; }
 
-        public DbSet<Coockers> Coockers { get; set; }
+        public DbSet<Coocker> Coockers { get; set; }
 
         public DbSet<DesktopPc> DesktopPcs { get; set; }
 
@@ -27,9 +27,9 @@ namespace TechCatalogAdminPanel.Data
 
         public DbSet<Laptop> Laptops { get; set; }
 
-        public DbSet<MobilePhones> MobilePhones { get; set; }
+        public DbSet<MobilePhone> MobilePhones { get; set; }
 
-        public DbSet<Monitors> Monitors { get; set; }
+        public DbSet<Monitor> Monitors { get; set; }
 
         public DbSet<Mouse> Mice { get; set; }
 

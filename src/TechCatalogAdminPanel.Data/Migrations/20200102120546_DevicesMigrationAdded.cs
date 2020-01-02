@@ -2,39 +2,10 @@
 
 namespace TechCatalogAdminPanel.Data.Migrations
 {
-    public partial class ApplicationTablesAdded : Migration
+    public partial class DevicesMigrationAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "AirConditioners",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Brand = table.Column<string>(nullable: true),
-                    DeviceModel = table.Column<int>(nullable: false),
-                    Color = table.Column<string>(nullable: true),
-                    Image = table.Column<string>(nullable: true),
-                    Weight = table.Column<decimal>(nullable: false),
-                    Warranty = table.Column<int>(nullable: false),
-                    Price = table.Column<decimal>(nullable: false),
-                    CapacityCooling = table.Column<decimal>(nullable: false),
-                    CapacityHeating = table.Column<decimal>(nullable: false),
-                    PowerConsumptionCooling = table.Column<decimal>(nullable: false),
-                    PowerConsumptionHeating = table.Column<decimal>(nullable: false),
-                    IsInverterMotor = table.Column<bool>(nullable: false),
-                    EnergyClassCooling = table.Column<int>(nullable: false),
-                    EnergyClassHeating = table.Column<int>(nullable: false),
-                    IsRemoteControl = table.Column<bool>(nullable: false),
-                    NoiseLevelInsideUnit = table.Column<int>(nullable: false),
-                    NoiseLevelOutsideUnit = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AirConditioners", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Coockers",
                 columns: table => new
@@ -88,6 +59,35 @@ namespace TechCatalogAdminPanel.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DesktopPcs", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GameConsole",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Brand = table.Column<string>(nullable: true),
+                    DeviceModel = table.Column<int>(nullable: false),
+                    Color = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true),
+                    Weight = table.Column<decimal>(nullable: false),
+                    Warranty = table.Column<int>(nullable: false),
+                    Price = table.Column<decimal>(nullable: false),
+                    CapacityCooling = table.Column<decimal>(nullable: false),
+                    CapacityHeating = table.Column<decimal>(nullable: false),
+                    PowerConsumptionCooling = table.Column<decimal>(nullable: false),
+                    PowerConsumptionHeating = table.Column<decimal>(nullable: false),
+                    IsInverterMotor = table.Column<bool>(nullable: false),
+                    EnergyClassCooling = table.Column<int>(nullable: false),
+                    EnergyClassHeating = table.Column<int>(nullable: false),
+                    IsRemoteControl = table.Column<bool>(nullable: false),
+                    NoiseLevelInsideUnit = table.Column<int>(nullable: false),
+                    NoiseLevelOutsideUnit = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GameConsole", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -266,7 +266,6 @@ namespace TechCatalogAdminPanel.Data.Migrations
                     Warranty = table.Column<int>(nullable: false),
                     Price = table.Column<decimal>(nullable: false),
                     Contrast = table.Column<string>(nullable: true),
-                    MyProperty = table.Column<int>(nullable: false),
                     DisplayType = table.Column<string>(nullable: true),
                     DisplaySizeInch = table.Column<decimal>(nullable: false),
                     RefreshRate = table.Column<int>(nullable: false),
@@ -394,13 +393,13 @@ namespace TechCatalogAdminPanel.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AirConditioners");
-
-            migrationBuilder.DropTable(
                 name: "Coockers");
 
             migrationBuilder.DropTable(
                 name: "DesktopPcs");
+
+            migrationBuilder.DropTable(
+                name: "GameConsole");
 
             migrationBuilder.DropTable(
                 name: "GameConsoles");

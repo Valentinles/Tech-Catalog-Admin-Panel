@@ -9,8 +9,8 @@ using TechCatalogAdminPanel.Data;
 namespace TechCatalogAdminPanel.Data.Migrations
 {
     [DbContext(typeof(TechCatalogDbContext))]
-    [Migration("20191227111145_ApplicationTablesAdded")]
-    partial class ApplicationTablesAdded
+    [Migration("20200102120546_DevicesMigrationAdded")]
+    partial class DevicesMigrationAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,10 +80,10 @@ namespace TechCatalogAdminPanel.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AirConditioners");
+                    b.ToTable("GameConsole");
                 });
 
-            modelBuilder.Entity("TechCatalogAdminPanel.Models.Coockers", b =>
+            modelBuilder.Entity("TechCatalogAdminPanel.Models.Coocker", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -431,7 +431,7 @@ namespace TechCatalogAdminPanel.Data.Migrations
                     b.ToTable("Laptops");
                 });
 
-            modelBuilder.Entity("TechCatalogAdminPanel.Models.MobilePhones", b =>
+            modelBuilder.Entity("TechCatalogAdminPanel.Models.MobilePhone", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -497,7 +497,7 @@ namespace TechCatalogAdminPanel.Data.Migrations
                     b.ToTable("MobilePhones");
                 });
 
-            modelBuilder.Entity("TechCatalogAdminPanel.Models.Monitors", b =>
+            modelBuilder.Entity("TechCatalogAdminPanel.Models.Monitor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -527,9 +527,6 @@ namespace TechCatalogAdminPanel.Data.Migrations
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MyProperty")
-                        .HasColumnType("int");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
