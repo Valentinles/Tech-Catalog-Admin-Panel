@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechCatalogAdminPanel.Data;
 
 namespace TechCatalogAdminPanel.Data.Migrations
 {
     [DbContext(typeof(TechCatalogDbContext))]
-    partial class TechCatalogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200103114937_AirConditionerTableAdded")]
+    partial class AirConditionerTableAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

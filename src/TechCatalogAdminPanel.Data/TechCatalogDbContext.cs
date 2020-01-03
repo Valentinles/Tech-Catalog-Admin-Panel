@@ -13,7 +13,7 @@ namespace TechCatalogAdminPanel.Data
         {
         }
 
-        public DbSet<AirConditioner> GameConsole { get; set; }
+        public DbSet<AirConditioner> AirConditioners { get; set; }
 
         public DbSet<Coocker> Coockers { get; set; }
 
