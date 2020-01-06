@@ -8,7 +8,7 @@ namespace TechCatalogAdminPanel.Common.ViewModels
     {
         public string Brand { get; set; }
 
-        public int DeviceModel { get; set; }
+        public string DeviceModel { get; set; }
 
         public string Color { get; set; }
 
