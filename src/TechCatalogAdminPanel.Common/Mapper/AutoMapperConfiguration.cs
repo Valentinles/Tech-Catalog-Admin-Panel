@@ -43,6 +43,22 @@ namespace TechCatalogAdminPanel.Common.Mapper
             this.CreateMap<Tv, TvEditViewModel>();
             this.CreateMap<WashingMachine, WashingMachineEditViewModel>();
 
+            //listing mappings
+            this.CreateMap<AirConditioner, DeviceListingViewModel>();
+            this.CreateMap<Coocker, DeviceListingViewModel>();
+            this.CreateMap<DesktopPc, DeviceListingViewModel>();
+            this.CreateMap<GameConsole, DeviceListingViewModel>();
+            this.CreateMap<Headphone, DeviceListingViewModel>();
+            this.CreateMap<Keyboard, DeviceListingViewModel>();
+            this.CreateMap<Laptop, DeviceListingViewModel>();
+            this.CreateMap<MobilePhone, DeviceListingViewModel>();
+            this.CreateMap<Monitor, DeviceListingViewModel>();
+            this.CreateMap<Mouse, DeviceListingViewModel>();
+            this.CreateMap<Refrigerator, DeviceListingViewModel>();
+            this.CreateMap<Tablet, DeviceListingViewModel>();
+            this.CreateMap<Tv, DeviceListingViewModel>();
+            this.CreateMap<WashingMachine, DeviceListingViewModel>();
+
         }
     }
 }
