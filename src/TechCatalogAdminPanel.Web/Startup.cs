@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TechCatalogAdminPanel.Common.Mapper;
 using TechCatalogAdminPanel.Data;
+using TechCatalogAdminPanel.Services.Implementations;
+using TechCatalogAdminPanel.Services.Interfaces;
 
 namespace TechCatalogAdminPanel.Web
 {
@@ -31,7 +33,9 @@ namespace TechCatalogAdminPanel.Web
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddScoped<IDeviceService, DeviceService>();
+
+            services.AddAutoMapper(typeof(AutoMapperConfiguration));
 
             services.AddControllersWithViews();
         }
