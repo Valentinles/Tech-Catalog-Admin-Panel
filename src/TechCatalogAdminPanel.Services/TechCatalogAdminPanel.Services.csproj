@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TechCatalogAdminPanel.Common\TechCatalogAdminPanel.Common.csproj" />
     <ProjectReference Include="..\TechCatalogAdminPanel.Data\TechCatalogAdminPanel.Data.csproj" />
   </ItemGroup>
 
