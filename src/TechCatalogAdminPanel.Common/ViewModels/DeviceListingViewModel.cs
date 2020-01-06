@@ -6,6 +6,8 @@ namespace TechCatalogAdminPanel.Common.ViewModels
 {
     public class DeviceListingViewModel
     {
+        public int Id { get; set; }
+
         public string Brand { get; set; }
 
         public string DeviceModel { get; set; }
