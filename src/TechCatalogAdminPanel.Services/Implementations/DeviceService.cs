@@ -82,10 +82,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return airConditioners;
         }
 
-        public async Task<AirConditionerEditViewModel> GetAirConditionerById(int id)
+        public async Task<AirConditioner> GetAirConditionerById(int id)
         {
             var airConditioner = await this.context.AirConditioners
-                .ProjectTo<AirConditionerEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(a => a.Id == id);
 
             return airConditioner;
@@ -150,10 +149,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return coockers;
         }
 
-        public async Task<CoockerEditViewModel> GetCoockerById(int id)
+        public async Task<Coocker> GetCoockerById(int id)
         {
             var coocker = await this.context.Coockers
-                .ProjectTo<CoockerEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(a => a.Id == id);
 
             return coocker;
@@ -219,10 +217,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return desktopPcs;
         }
 
-        public async Task<DesktopPcEditViewModel> GetDesktopPcById(int id)
+        public async Task<DesktopPc> GetDesktopPcById(int id)
         {
             var desktopPc = await this.context.DesktopPcs
-                .ProjectTo<DesktopPcEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(d => d.Id == id);
 
             return desktopPc;
@@ -287,10 +284,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return gameConsoles;
         }
 
-        public async Task<GameConsoleEditViewModel> GetGameConsoleById(int id)
+        public async Task<GameConsole> GetGameConsoleById(int id)
         {
             var gameConsole = await this.context.GameConsoles
-                .ProjectTo<GameConsoleEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(g => g.Id == id);
 
             return gameConsole;
@@ -354,10 +350,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return headphones;
         }
 
-        public async Task<HeadphoneEditViewModel> GetHeadphoneById(int id)
+        public async Task<Headphone> GetHeadphoneById(int id)
         {
             var headphone = await this.context.Headphones
-                .ProjectTo<HeadphoneEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(h => h.Id == id);
 
             return headphone;
@@ -416,10 +411,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return keyboards;
         }
 
-        public async Task<KeyboardEditViewModel> GetKeyboardById(int id)
+        public async Task<Keyboard> GetKeyboardById(int id)
         {
             var keyboard = await this.context.Keyboards
-                .ProjectTo<KeyboardEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(k => k.Id == id);
 
             return keyboard;
@@ -493,10 +487,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return laptops;
         }
 
-        public async Task<LaptopEditViewModel> GetLaptopById(int id)
+        public async Task<Laptop> GetLaptopById(int id)
         {
             var laptop = await this.context.Laptops
-                .ProjectTo<LaptopEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(l => l.Id == id);
 
             return laptop;
@@ -564,10 +557,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return mobilePhones;
         }
 
-        public async Task<MobilePhoneEditViewModel> GetMobilePhoneById(int id)
+        public async Task<MobilePhone> GetMobilePhoneById(int id)
         {
             var mobilePhone = await this.context.MobilePhones
-                .ProjectTo<MobilePhoneEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             return mobilePhone;
@@ -630,10 +622,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return monitors;
         }
 
-        public async Task<MonitorEditViewModel> GetMonitorById(int id)
+        public async Task<Monitor> GetMonitorById(int id)
         {
             var monitor = await this.context.Monitors
-                .ProjectTo<MonitorEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             return monitor;
@@ -694,10 +685,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return mice;
         }
 
-        public async Task<MouseEditViewModel> GetMouseById(int id)
+        public async Task<Mouse> GetMouseById(int id)
         {
             var mouse = await this.context.Mice
-                .ProjectTo<MouseEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             return mouse;
@@ -763,10 +753,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return refrigerators;
         }
 
-        public async Task<RefrigeratorEditViewModel> GetRefrigeratorById(int id)
+        public async Task<Refrigerator> GetRefrigeratorById(int id)
         {
             var refrigerator = await this.context.Refrigerators
-                .ProjectTo<RefrigeratorEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(a => a.Id == id);
 
             return refrigerator;
@@ -835,10 +824,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return tablets;
         }
 
-        public async Task<TabletEditViewModel> GetTabletById(int id)
+        public async Task<Tablet> GetTabletById(int id)
         {
             var tablet = await this.context.Tablets
-                .ProjectTo<TabletEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(t => t.Id == id);
 
             return tablet;
@@ -901,10 +889,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return Tvs;
         }
 
-        public async Task<TvEditViewModel> GetTvById(int id)
+        public async Task<Tv> GetTvById(int id)
         {
             var tv = await this.context.Tvs
-                .ProjectTo<TvEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(t => t.Id == id);
 
             return tv;
@@ -972,10 +959,9 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return washingMachines;
         }
 
-        public async Task<WashingMachineEditViewModel> GetWashingMachineById(int id)
+        public async Task<WashingMachine> GetWashingMachineById(int id)
         {
             var washingMachine = await this.context.WashingMachines
-                .ProjectTo<WashingMachineEditViewModel>(null, mapper)
                 .FirstOrDefaultAsync(w => w.Id == id);
 
             return washingMachine;
