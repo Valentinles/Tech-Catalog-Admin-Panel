@@ -9,11 +9,7 @@ namespace TechCatalogAdminPanel.Common.ViewModels
     {
         public EnergyClass EnergyClass { get; set; }
 
-        public decimal WashingCapacity { get; set; }
-
-        public int EnergyConsumption { get; set; }
-
-        public int WaterConsumption { get; set; }
+        public int Volume { get; set; }
 
         public int NumberOfFunctions { get; set; }
 
