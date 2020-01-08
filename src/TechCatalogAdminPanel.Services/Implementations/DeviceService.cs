@@ -130,9 +130,7 @@ namespace TechCatalogAdminPanel.Services.Implementations
             coocker.Warranty = model.Warranty;
             coocker.Price = model.Price;
             coocker.EnergyClass = model.EnergyClass;
-            coocker.WashingCapacity = model.WashingCapacity;
-            coocker.EnergyConsumption = model.EnergyConsumption;
-            coocker.WaterConsumption = model.WaterConsumption;
+            coocker.Volume = model.Volume;
             coocker.NumberOfFunctions = model.NumberOfFunctions;
             coocker.IsTimer = model.IsTimer;
             coocker.IsProgrammer = model.IsProgrammer;
