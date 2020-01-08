@@ -58,7 +58,6 @@ namespace TechCatalogAdminPanel.Common.Mapper
             this.CreateMap<Tablet, DeviceListingViewModel>();
             this.CreateMap<Tv, DeviceListingViewModel>();
             this.CreateMap<WashingMachine, DeviceListingViewModel>();
-
         }
     }
 }
