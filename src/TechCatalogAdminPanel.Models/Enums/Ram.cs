@@ -16,6 +16,9 @@ namespace TechCatalogAdminPanel.Models.Enums
         [Display(Name ="6 GB")]
         GB_6,
 
+        [Display(Name = "8 GB")]
+        GB_8,
+
         [Display(Name = "12 GB")]
         GB_12,
 
