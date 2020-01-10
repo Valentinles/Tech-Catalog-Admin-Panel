@@ -1,9 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<HistoryListingViewModel>
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Admin Panel</h1>
     <p>Here you have the full access to the database of TechCatalog.</p>
 
+</div>
+<br />
+
+<div class="col-sm bg-white rounded box-shadow">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+    @foreach (var history in Model.Take(20))
+    {
+        <div class="media text-muted pt-3 col-sm">
+            <img alt="32x32" class="mr-2 rounded" style="width: 24px; height: 24px;" src="https://i.dlpng.com/static/png/3882985_thumb.png" data-holder-rendered="true">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark"></strong>
+                @history.Text <small>@history.CreatedOn</small>
+            </p>
+        </div>
+    }
 </div>
