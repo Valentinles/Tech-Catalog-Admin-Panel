@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TechCatalogAdminPanel.Web</title>
+    <title>TC Admin Panel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-light bg-white border border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TechCatalogAdminPanel.Web</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TechCatalog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,50 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <div class="dropdown">
+                                <a class="btn nav-link text-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    New
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" asp-action="AddAirConditioner" asp-controller="Device">Air Conditioner</a>
+                                    <a class="dropdown-item" asp-action="AddCoocker" asp-controller="Device">Coocker</a>
+                                    <a class="dropdown-item" asp-action="AddDesktopPc" asp-controller="Device">Desktop Pc</a>
+                                    <a class="dropdown-item" asp-action="AddGameConsole" asp-controller="Device">Game Console</a>
+                                    <a class="dropdown-item" asp-action="AddHeadphone" asp-controller="Device">Headphone</a>
+                                    <a class="dropdown-item" asp-action="AddKeyboard" asp-controller="Device">Keyboard</a>
+                                    <a class="dropdown-item" asp-action="AddLaptop" asp-controller="Device">Laptop</a>
+                                    <a class="dropdown-item" asp-action="AddMobilePhone" asp-controller="Device">Mobile Phone</a>
+                                    <a class="dropdown-item" asp-action="AddMonitor" asp-controller="Device">Monitor</a>
+                                    <a class="dropdown-item" asp-action="AddMouse" asp-controller="Device">Mouse</a>
+                                    <a class="dropdown-item" asp-action="AddRefrigerator" asp-controller="Device">Refrigerator</a>
+                                    <a class="dropdown-item" asp-action="AddTablet" asp-controller="Device">Tablet</a>
+                                    <a class="dropdown-item" asp-action="AddTv" asp-controller="Device">TV</a>
+                                    <a class="dropdown-item" asp-action="AddWashingMachine" asp-controller="Device">Washing Machine</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="btn nav-link text-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Edit/Delete
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" asp-action="AllAirConditioners" asp-controller="Device">Air Conditioners</a>
+                                    <a class="dropdown-item" asp-action="AllCoockers" asp-controller="Device">Coockers</a>
+                                    <a class="dropdown-item" asp-action="AllDesktopPcs" asp-controller="Device">Desktop Pcs</a>
+                                    <a class="dropdown-item" asp-action="AllGameConsoles" asp-controller="Device">Game Consoles</a>
+                                    <a class="dropdown-item" asp-action="AllHeadphones" asp-controller="Device">Headphones</a>
+                                    <a class="dropdown-item" asp-action="AllKeyboards" asp-controller="Device">Keyboards</a>
+                                    <a class="dropdown-item" asp-action="AllLaptops" asp-controller="Device">Laptops</a>
+                                    <a class="dropdown-item" asp-action="AllMobilePhones" asp-controller="Device">Mobile Phones</a>
+                                    <a class="dropdown-item" asp-action="AllMonitors" asp-controller="Device">Monitors</a>
+                                    <a class="dropdown-item" asp-action="AllMice" asp-controller="Device">Mice</a>
+                                    <a class="dropdown-item" asp-action="AllRefrigerators" asp-controller="Device">Refrigerators</a>
+                                    <a class="dropdown-item" asp-action="AllTablets" asp-controller="Device">Tablets</a>
+                                    <a class="dropdown-item" asp-action="AllTvs" asp-controller="Device">TVs</a>
+                                    <a class="dropdown-item" asp-action="AllWashingMachines" asp-controller="Device">Washing Machines</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
