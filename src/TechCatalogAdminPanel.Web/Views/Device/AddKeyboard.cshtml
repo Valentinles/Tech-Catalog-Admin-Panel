@@ -1,0 +1,78 @@
+﻿@model KeyboardBindingModel
+@using TechCatalogAdminPanel.Models.Enums
+
+<h1 class="text-center display-4">New Keyboard</h1>
+<br />
+<hr />
+<form asp-action="AddKeyboard" asp-controller="Device">
+    <div class="container">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="DeviceModel" class="control-label">Model</label>
+                <input asp-for="DeviceModel" class="form-control" />
+                <span asp-validation-for="DeviceModel" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Warranty" class="control-label"></label>
+                <input asp-for="Warranty" class="form-control" />
+                <span asp-validation-for="Warranty" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <h3 class="text-center">Other Specifications</h3>
+    <br />
+    <div align="center">
+        <div class="col-md-3 form-group">
+            <label asp-for="Interface" class="control-label"></label>
+            <input asp-for="Interface" class="form-control" />
+            <span asp-validation-for="Interface" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsFastButtons" class="control-label">Fast Buttons</label>
+            <br />
+            <label asp-for="IsFastButtons" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsFastButtons" value="true" />
+            <br />
+            <label asp-for="IsFastButtons" class="control-label">No</label>
+            <input type="radio" asp-for="IsFastButtons" value="false" />
+            <span asp-validation-for="IsFastButtons" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Add Keyboard" class="btn btn-outline-primary" />
+    </div>
+</form>
+

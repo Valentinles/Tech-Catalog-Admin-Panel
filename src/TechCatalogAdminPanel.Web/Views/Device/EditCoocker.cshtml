@@ -1,0 +1,108 @@
+﻿@model CoockerEditViewModel
+
+<h1 class="text-center display-4">Edit @Model.Brand @Model.DeviceModel</h1>
+<img src="@Model.Image" width="200" class="mx-auto d-block" />
+<br />
+<hr />
+<form asp-action="EditCoocker" asp-controller="Device">
+    <div class="container">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="DeviceModel" class="control-label">Model</label>
+                <input asp-for="DeviceModel" class="form-control" />
+                <span asp-validation-for="DeviceModel" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Warranty" class="control-label"></label>
+                <input asp-for="Warranty" class="form-control" />
+                <span asp-validation-for="Warranty" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <h3 class="text-center">Other Specifications</h3>
+    <div align="center">
+        <div class="col-md-3 form-group">
+            <label asp-for="EnergyClass" class="control-label">Energy Class</label>
+            <select asp-for="EnergyClass" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<EnergyClass>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="EnergyClass" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group" align="center">
+            <label asp-for="Volume" class="control-label">Volume</label>
+            <input asp-for="Volume" class="form-control" />
+            <span asp-validation-for="Volume" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group" align="center">
+            <label asp-for="NumberOfFunctions" class="control-label">Number of Functions</label>
+            <input asp-for="NumberOfFunctions" class="form-control" />
+            <span asp-validation-for="NumberOfFunctions" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsTimer" class="control-label">Timer</label>
+            <br />
+            <label asp-for="IsTimer" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsTimer" value="true" />
+            <br />
+            <label asp-for="IsTimer" class="control-label">No</label>
+            <input type="radio" asp-for="IsTimer" value="false" />
+            <span asp-validation-for="IsTimer" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsProgrammer" class="control-label">Programmer</label>
+            <br />
+            <label asp-for="IsProgrammer" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsProgrammer" value="true" />
+            <br />
+            <label asp-for="IsProgrammer" class="control-label">No</label>
+            <input type="radio" asp-for="IsProgrammer" value="false" />
+            <span asp-validation-for="IsProgrammer" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsCatalicPanel" class="control-label">Catalic Panel</label>
+            <br />
+            <label asp-for="IsCatalicPanel" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsCatalicPanel" value="true" />
+            <br />
+            <label asp-for="IsCatalicPanel" class="control-label">No</label>
+            <input type="radio" asp-for="IsCatalicPanel" value="false" />
+            <span asp-validation-for="IsCatalicPanel" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Update @Model.Brand @Model.DeviceModel" class="btn btn-outline-primary" />
+    </div>
+</form>

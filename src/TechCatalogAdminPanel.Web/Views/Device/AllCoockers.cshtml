@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DeviceListingViewModel>
+
+<h1 class=" text-center display-4">Coockers</h1>
+<br />
+<hr />
+<div class="row mx-auto" align="center">
+
+    @foreach (var c in Model)
+    {
+        <div class="card border-bottom box-shadow mb-3" style="width: 19rem;">
+            <img class="card-img-top" src="@c.Image" alt="Card image cap">
+            <h4>@c.Brand @c.DeviceModel</h4>
+            <p>@c.Price $</p>
+            <div class="card-body">
+                <a asp-action="EditCoocker" asp-controller="Device" asp-route-id="@c.Id" class="card-text">Edit /</a>
+                <a asp-action="DeleteCoocker" asp-controller="Device" asp-route-id="@c.Id" class="card-text">Delete</a>
+            </div>
+        </div>
+    }
+</div>

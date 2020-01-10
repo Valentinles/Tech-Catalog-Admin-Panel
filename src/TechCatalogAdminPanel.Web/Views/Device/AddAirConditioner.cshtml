@@ -1,0 +1,127 @@
+﻿@model AirConditionerBindingModel
+@using TechCatalogAdminPanel.Models.Enums
+
+<h1 class="text-center display-4">New Air Conditioner</h1>
+<br />
+<hr />
+<form asp-action="AddAirConditioner" asp-controller="Device">
+    <div class="container">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="DeviceModel" class="control-label">Model</label>
+                <input asp-for="DeviceModel" class="form-control" />
+                <span asp-validation-for="DeviceModel" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Warranty" class="control-label"></label>
+                <input asp-for="Warranty" class="form-control" />
+                <span asp-validation-for="Warranty" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <h3 class="text-center">Other Specifications</h3>
+    <br />
+    <div align="center">
+        <div class="col-md-3 form-group">
+            <label asp-for="CapacityCooling" class="control-label">Capacity Cooling</label>
+            <input asp-for="CapacityCooling" class="form-control" />
+            <span asp-validation-for="CapacityCooling" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="CapacityHeating" class="control-label">Capacity Heating</label>
+            <input asp-for="CapacityHeating" class="form-control" />
+            <span asp-validation-for="CapacityHeating" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="PowerConsumptionCooling" class="control-label">Power Consumption Cooling</label>
+            <input asp-for="PowerConsumptionCooling" class="form-control" />
+            <span asp-validation-for="PowerConsumptionCooling" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label asp-for="PowerConsumptionHeating" class="control-label">Power Consumption Heating</label>
+            <input asp-for="PowerConsumptionHeating" class="form-control" />
+            <span asp-validation-for="PowerConsumptionHeating" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsInverterMotor" class="control-label">Inverter Motor</label>
+            <br />
+            <label asp-for="IsInverterMotor" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsInverterMotor" value="true" />
+            <br />
+            <label asp-for="IsInverterMotor" class="control-label">No</label>
+            <input type="radio" asp-for="IsInverterMotor" value="false" />
+            <span asp-validation-for="IsInverterMotor" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsRemoteControl" class="control-label">Remote Control</label>
+            <br />
+            <label asp-for="IsRemoteControl" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsRemoteControl" value="true" />
+            <br />
+            <label asp-for="IsRemoteControl" class="control-label">No</label>
+            <input type="radio" asp-for="IsRemoteControl" value="false" />
+            <span asp-validation-for="IsRemoteControl" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="EnergyClassCooling" class="control-label">Energy Class Cooling</label>
+            <select asp-for="EnergyClassCooling" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<EnergyClass>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="EnergyClassCooling" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="EnergyClassHeating" class="control-label">Energy Class Heating</label>
+            <select asp-for="EnergyClassHeating" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<EnergyClass>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="EnergyClassHeating" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="NoiseLevelInsideUnit" class="control-label">Noise Level Inside Unit</label>
+            <input asp-for="NoiseLevelInsideUnit" class="form-control" />
+            <span asp-validation-for="NoiseLevelInsideUnit" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="NoiseLevelOutsideUnit" class="control-label">Noise Level Outside Unit</label>
+            <input asp-for="NoiseLevelOutsideUnit" class="form-control" />
+            <span asp-validation-for="NoiseLevelOutsideUnit" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Add Air Conditioner" class="btn btn-outline-primary" />
+    </div>
+</form>

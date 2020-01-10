@@ -1,0 +1,99 @@
+﻿@model MonitorEditViewModel
+@using TechCatalogAdminPanel.Models.Enums
+
+<h1 class="text-center display-4">Edit @Model.Brand @Model.DeviceModel</h1>
+<img src="@Model.Image" width="200" class="mx-auto d-block" />
+<br />
+<hr />
+<form asp-action="EditMonitor" asp-controller="Device">
+    <div class="container">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="DeviceModel" class="control-label">Model</label>
+                <input asp-for="DeviceModel" class="form-control" />
+                <span asp-validation-for="DeviceModel" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Warranty" class="control-label"></label>
+                <input asp-for="Warranty" class="form-control" />
+                <span asp-validation-for="Warranty" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <h3 class="text-center">Other Specifications</h3>
+    <br />
+    <div align="center">
+        <div class="col-md-3 form-group">
+            <label asp-for="Contrast" class="control-label"></label>
+            <input asp-for="Contrast" class="form-control" />
+            <span asp-validation-for="Contrast" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label asp-for="DisplayType" class="control-label">Display Type</label>
+            <input asp-for="DisplayType" class="form-control" />
+            <span asp-validation-for="DisplayType" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="DisplaySizeInch" class="control-label">Display Size (Inches)</label>
+            <input asp-for="DisplaySizeInch" class="form-control" />
+            <span asp-validation-for="DisplaySizeInch" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="RefreshRate" class="control-label">Refresh Rate</label>
+            <select asp-for="RefreshRate" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<RefreshRate>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="RefreshRate" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Resolution" class="control-label"></label>
+            <select asp-for="Resolution" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<Resolution>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="Resolution" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Dimension" class="control-label"></label>
+            <input asp-for="Dimension" class="form-control" />
+            <span asp-validation-for="Dimension" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Update @Model.Brand @Model.DeviceModel" class="btn btn-outline-primary" />
+    </div>
+</form>
+

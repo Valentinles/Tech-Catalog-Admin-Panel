@@ -1,0 +1,166 @@
+﻿@model LaptopBindingModel
+@using TechCatalogAdminPanel.Models.Enums
+
+<h1 class="text-center display-4">New Laptop</h1>
+<br />
+<hr />
+<form asp-action="AddLaptop" asp-controller="Device">
+    <div class="container">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="DeviceModel" class="control-label">Model</label>
+                <input asp-for="DeviceModel" class="form-control" />
+                <span asp-validation-for="DeviceModel" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Warranty" class="control-label"></label>
+                <input asp-for="Warranty" class="form-control" />
+                <span asp-validation-for="Warranty" class="text-danger"></span>
+            </div>
+
+            <div class="col-sm form-group" align="center">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <hr />
+    <h3 class="text-center">Other Specifications</h3>
+    <br />
+    <div align="center">
+        <div class="col-md-3 form-group">
+            <label asp-for="Ram" class="control-label">RAM</label>
+            <select asp-for="Ram" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<Ram>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="Ram" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Hdd" class="control-label">HDD</label>
+            <input asp-for="Hdd" class="form-control" />
+            <span asp-validation-for="Hdd" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Ssd" class="control-label">SSD</label>
+            <input asp-for="Ssd" class="form-control" />
+            <span asp-validation-for="Ssd" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Processor" class="control-label">Processor (brand and model)</label>
+            <input asp-for="Processor" class="form-control" />
+            <span asp-validation-for="Processor" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label asp-for="ProcessorSpeed" class="control-label">Processor Speed</label>
+            <input asp-for="ProcessorSpeed" class="form-control" />
+            <span asp-validation-for="ProcessorSpeed" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="VideoCard" class="control-label">Video Card (brand and model)</label>
+            <input asp-for="VideoCard" class="form-control" />
+            <span asp-validation-for="VideoCard" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="VideoCardMemory" class="control-label">Video Card Memory</label>
+            <input asp-for="VideoCardMemory" class="form-control" />
+            <span asp-validation-for="VideoCardMemory" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="DisplayType" class="control-label">Display Type</label>
+            <input asp-for="DisplayType" class="form-control" />
+            <span asp-validation-for="DisplayType" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="DisplaySizeInch" class="control-label">Display Size (Inches)</label>
+            <input asp-for="DisplaySizeInch" class="form-control" />
+            <span asp-validation-for="DisplaySizeInch" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="RefreshRate" class="control-label">Refresh Rate</label>
+            <select asp-for="RefreshRate" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<RefreshRate>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="RefreshRate" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Resolution" class="control-label"></label>
+            <select asp-for="Resolution" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<Resolution>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="Resolution" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="WirelessAdapter" class="control-label">Wireless Adapter</label>
+            <input asp-for="WirelessAdapter" class="form-control" />
+            <span asp-validation-for="WirelessAdapter" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="NumberOfUsbPorts" class="control-label">Number of Ports</label>
+            <input asp-for="NumberOfUsbPorts" class="form-control" />
+            <span asp-validation-for="NumberOfUsbPorts" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="Battery" class="control-label"></label>
+            <input asp-for="Battery" class="form-control" />
+            <span asp-validation-for="Battery" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsBluetooth" class="control-label">Bluetooth</label>
+            <br />
+            <label asp-for="IsBluetooth" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsBluetooth" value="true" />
+            <br />
+            <label asp-for="IsBluetooth" class="control-label">No</label>
+            <input type="radio" asp-for="IsBluetooth" value="false" />
+            <span asp-validation-for="IsBluetooth" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="IsHdmi" class="control-label">HDMI</label>
+            <br />
+            <label asp-for="IsHdmi" class="control-label">Yes</label>
+            <input type="radio" asp-for="IsHdmi" value="true" />
+            <br />
+            <label asp-for="IsHdmi" class="control-label">No</label>
+            <input type="radio" asp-for="IsHdmi" value="false" />
+            <span asp-validation-for="IsHdmi" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 form-group">
+            <label asp-for="OperatingSystemOs" class="control-label"></label>
+            <select asp-for="OperatingSystemOs" class="form-control dropdown-toggle col-lg-12" asp-items="Html.GetEnumSelectList<Os>()">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="OperatingSystemOs" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Add Laptop" class="btn btn-outline-primary" />
+    </div>
+</form>
