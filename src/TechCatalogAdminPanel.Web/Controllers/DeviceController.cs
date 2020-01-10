@@ -32,7 +32,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddAirConditioner(model);
@@ -90,7 +90,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddCoocker(model);
@@ -148,7 +148,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest(); 
             }
 
             await this.deviceService.AddDesktopPc(model);
@@ -206,7 +206,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddGameConsole(model);
@@ -264,7 +264,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddHeadphone(model);
@@ -322,7 +322,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddKeyboard(model);
@@ -380,7 +380,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddLaptop(model);
@@ -438,7 +438,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddMobilePhone(model);
@@ -496,7 +496,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddMonitor(model);
@@ -554,7 +554,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddMouse(model);
@@ -612,7 +612,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddRefrigerator(model);
@@ -670,7 +670,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddTablet(model);
@@ -728,7 +728,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddTv(model);
@@ -786,7 +786,7 @@ namespace TechCatalogAdminPanel.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             await this.deviceService.AddWashingMachine(model);
