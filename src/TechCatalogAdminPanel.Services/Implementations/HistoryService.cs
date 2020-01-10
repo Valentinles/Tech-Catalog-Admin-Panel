@@ -21,8 +21,8 @@ namespace TechCatalogAdminPanel.Services.Implementations
 
         public async Task<IEnumerable<History>> GetAllHistories()
         {
-            var histories = await this.context.Histories.
-                OrderByDescending(h => h.Id)
+            var histories = await this.context.Histories
+                .OrderByDescending(h=>h.CreatedOn)
                 .ToListAsync();
 
             return histories;
