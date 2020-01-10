@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TechCatalogAdminPanel.Common.ViewModels;
+using TechCatalogAdminPanel.Services.Interfaces;
 using TechCatalogAdminPanel.Web.Models;
 
 namespace TechCatalogAdminPanel.Web.Controllers
@@ -12,15 +15,23 @@ namespace TechCatalogAdminPanel.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IHistoryService historyService;
+        readonly IMapper mapper;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(IHistoryService historyService, IMapper mapper, ILogger<HomeController> logger)
         {
+            this.historyService = historyService;
+            this.mapper = mapper;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var histories = (await this.historyService.GetAllHistories())
+                .Select(mapper.Map<HistoryListingViewModel>); 
+
+            return View(histories);
         }
 
         public IActionResult Privacy()
