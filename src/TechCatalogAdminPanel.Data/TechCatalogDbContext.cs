@@ -40,5 +40,7 @@ namespace TechCatalogAdminPanel.Data
         public DbSet<Tv> Tvs { get; set; }
 
         public DbSet<WashingMachine> WashingMachines { get; set; }
+
+        public DbSet<History> Histories { get; set; }
     }
 }
