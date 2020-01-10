@@ -26,7 +26,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var airConditioner = mapper.Map<AirConditioner>(model);
 
+            var history = new History();
+            history.Text = "Air Conditioner has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(airConditioner);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -39,7 +44,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Air Conditioner has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.AirConditioners.Remove(airConditioner);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -71,7 +81,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             airConditioner.NoiseLevelInsideUnit = model.NoiseLevelInsideUnit;
             airConditioner.NoiseLevelOutsideUnit = model.NoiseLevelOutsideUnit;
 
+            var history = new History();
+            history.Text = "Air Conditioner has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.AirConditioners.Update(airConditioner);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -95,7 +110,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var coocker = mapper.Map<Coocker>(model);
 
+            var history = new History();
+            history.Text = "Coocker has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(coocker);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -108,7 +128,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Coocker has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Coockers.Remove(cooker);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -136,7 +161,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             coocker.IsProgrammer = model.IsProgrammer;
             coocker.IsCatalicPanel = model.IsCatalicPanel;
 
+            var history = new History();
+            history.Text = "Coocker has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Coockers.Update(coocker);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -160,7 +190,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var desktopPc = mapper.Map<DesktopPc>(model);
 
+            var history = new History();
+            history.Text = "Desktop PC has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(desktopPc);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -173,7 +208,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Desktop PC has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.DesktopPcs.Remove(desktopPc);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -204,7 +244,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             desktopPc.Case = model.Case;
             desktopPc.IsBluetooth = model.IsBluetooth;
 
+            var history = new History();
+            history.Text = "Desktop PC has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.DesktopPcs.Update(desktopPc);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -228,7 +273,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var gameConsole = mapper.Map<GameConsole>(model);
 
+            var history = new History();
+            history.Text = "Game Console has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(gameConsole);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -241,7 +291,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Game Console has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.GameConsoles.Remove(gameConsole);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -270,8 +325,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             gameConsole.IsHdmi = model.IsHdmi;
             gameConsole.Dimension = model.Dimension;
 
+            var history = new History();
+            history.Text = "Game Console has been edited.";
+            history.CreatedOn = DateTime.Now;
 
             this.context.GameConsoles.Update(gameConsole);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -295,7 +354,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var headphone = mapper.Map<Headphone>(model);
 
+            var history = new History();
+            history.Text = "Headphone has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(headphone);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -308,7 +372,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Headphone has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Headphones.Remove(headphone);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -337,7 +406,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             headphone.Interface = model.Interface;
             headphone.CableLength = model.CableLength;
 
+            var history = new History();
+            history.Text = "Headphone has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Headphones.Update(headphone);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -361,7 +435,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var keyboard = mapper.Map<Keyboard>(model);
 
+            var history = new History();
+            history.Text = "Keyboard has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(keyboard);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -374,7 +453,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Keyboard has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Keyboards.Remove(keyboard);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -398,7 +482,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             keyboard.IsFastButtons = model.IsFastButtons;
             keyboard.Interface = model.Interface;
 
+            var history = new History();
+            history.Text = "Keyboard has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Keyboards.Update(keyboard);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -422,7 +511,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var laptop = mapper.Map<Laptop>(model);
 
+            var history = new History();
+            history.Text = "Laptop has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(laptop);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -435,7 +529,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Laptop has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Laptops.Remove(laptop);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -474,7 +573,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             laptop.Battery = model.Battery;
             laptop.OperatingSystemOs = model.OperatingSystemOs;
 
+            var history = new History();
+            history.Text = "Laptop has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Laptops.Update(laptop);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -498,7 +602,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var mobilePhone = mapper.Map<MobilePhone>(model);
 
+            var history = new History();
+            history.Text = "Mobile phone has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(mobilePhone);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -511,7 +620,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Mobile phone has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.MobilePhones.Remove(mobilePhone);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -544,7 +658,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             mobilePhone.Battery = model.Battery;
             mobilePhone.MobileOs = model.MobileOs;
 
+            var history = new History();
+            history.Text = "Mobile phone has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.MobilePhones.Update(mobilePhone);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -568,7 +687,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var monitor = mapper.Map<Monitor>(model);
 
+            var history = new History();
+            history.Text = "Monitor has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(monitor);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -581,7 +705,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Monitor has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Monitors.Remove(monitor);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -608,8 +737,13 @@ namespace TechCatalogAdminPanel.Services.Implementations
             monitor.RefreshRate = model.RefreshRate;
             monitor.Resolution = model.Resolution;
             monitor.Dimension = model.Dimension;
-            
+
+            var history = new History();
+            history.Text = "Monitor has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Monitors.Update(monitor);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -633,7 +767,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var mouse = mapper.Map<Mouse>(model);
 
+            var history = new History();
+            history.Text = "Mouse has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(mouse);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -646,7 +785,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Mouse has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Mice.Remove(mouse);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -672,7 +816,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             mouse.IsErgonomic = model.IsErgonomic;
             mouse.Interface = model.Interface;
 
+            var history = new History();
+            history.Text = "Mouse has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Mice.Update(mouse);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -696,7 +845,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var refrigerator = mapper.Map<Refrigerator>(model);
 
+            var history = new History();
+            history.Text = "Refrigerator has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(refrigerator);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -709,7 +863,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Refrigerator has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Refrigerators.Remove(refrigerator);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -740,7 +899,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             refrigerator.NumberOfShelves = model.NumberOfShelves;
             refrigerator.NoiseLevel = model.NoiseLevel;
 
+            var history = new History();
+            history.Text = "Refrigerator has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Refrigerators.Update(refrigerator);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -764,7 +928,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var tablet = mapper.Map<Tablet>(model);
 
+            var history = new History();
+            history.Text = "Tablet has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(tablet);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -777,7 +946,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Tablet has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Tablets.Remove(tablet);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -810,7 +984,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             tablet.Battery = model.Battery;
             tablet.MobileOs = model.MobileOs;
 
+            var history = new History();
+            history.Text = "Tablet has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Tablets.Update(tablet);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
 
         }
@@ -835,7 +1014,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var tv = mapper.Map<Tv>(model);
 
+            var history = new History();
+            history.Text = "TV has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(tv);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -848,7 +1032,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "TV has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Tvs.Remove(tv);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -875,7 +1064,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             tv.IsVoiceControl = model.IsVoiceControl;
             tv.IsSmartTv = model.IsSmartTv;
 
+            var history = new History();
+            history.Text = "TV has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.Tvs.Update(tv);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
 
         }
@@ -900,7 +1094,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
         {
             var washingMachine = mapper.Map<WashingMachine>(model);
 
+            var history = new History();
+            history.Text = "Washing Machine has been added.";
+            history.CreatedOn = DateTime.Now;
+
             await this.context.AddAsync(washingMachine);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -913,7 +1112,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
                 return;
             }
 
+            var history = new History();
+            history.Text = "Washing Machine has been deleted.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.WashingMachines.Remove(washingMachine);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
@@ -946,7 +1150,12 @@ namespace TechCatalogAdminPanel.Services.Implementations
             washingMachine.IsWoolProgram = model.IsWoolProgram;
             washingMachine.IsQuickWash = model.IsQuickWash;
 
+            var history = new History();
+            history.Text = "Washing Machine has been edited.";
+            history.CreatedOn = DateTime.Now;
+
             this.context.WashingMachines.Update(washingMachine);
+            await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
