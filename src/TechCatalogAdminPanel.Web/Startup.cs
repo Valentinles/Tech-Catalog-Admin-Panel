@@ -34,6 +34,7 @@ namespace TechCatalogAdminPanel.Web
                     Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IDeviceService, DeviceService>();
+            services.AddScoped<IHistoryService, HistoryService>();
 
             services.AddAutoMapper(typeof(AutoMapperConfiguration));
 
