@@ -15,7 +15,7 @@ namespace TechCatalogAdminPanel.Data
 
         public DbSet<AirConditioner> AirConditioners { get; set; }
 
-        public DbSet<Coocker> Coockers { get; set; }
+        public DbSet<Cooker> Cookers { get; set; }
 
         public DbSet<DesktopPc> DesktopPcs { get; set; }
 

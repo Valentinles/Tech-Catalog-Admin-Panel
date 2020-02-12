@@ -13,7 +13,7 @@ namespace TechCatalogAdminPanel.Common.Mapper
         {
             //binding mappings
             this.CreateMap<AirConditioner, AirConditionerBindingModel>().ReverseMap();
-            this.CreateMap<Coocker, CoockerBindingModel>().ReverseMap();
+            this.CreateMap<Cooker, CookerBindingModel>().ReverseMap();
             this.CreateMap<DesktopPc, DesktopPcBindingModel>().ReverseMap();
             this.CreateMap<GameConsole, GameConsoleBindingModel>().ReverseMap();
             this.CreateMap<Headphone, HeadphoneBindingModel>().ReverseMap();
@@ -29,7 +29,7 @@ namespace TechCatalogAdminPanel.Common.Mapper
 
             //edit mappings
             this.CreateMap<AirConditioner, AirConditionerEditViewModel>().ReverseMap();
-            this.CreateMap<Coocker, CoockerEditViewModel>().ReverseMap();
+            this.CreateMap<Cooker, CookerEditViewModel>().ReverseMap();
             this.CreateMap<DesktopPc, DesktopPcEditViewModel>().ReverseMap();
             this.CreateMap<GameConsole, GameConsoleEditViewModel>().ReverseMap();
             this.CreateMap<Headphone, HeadphoneEditViewModel>().ReverseMap();
@@ -45,7 +45,7 @@ namespace TechCatalogAdminPanel.Common.Mapper
 
             //listing mappings
             this.CreateMap<AirConditioner, DeviceListingViewModel>();
-            this.CreateMap<Coocker, DeviceListingViewModel>();
+            this.CreateMap<Cooker, DeviceListingViewModel>();
             this.CreateMap<DesktopPc, DeviceListingViewModel>();
             this.CreateMap<GameConsole, DeviceListingViewModel>();
             this.CreateMap<Headphone, DeviceListingViewModel>();

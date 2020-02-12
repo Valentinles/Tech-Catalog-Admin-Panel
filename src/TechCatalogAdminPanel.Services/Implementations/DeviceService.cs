@@ -105,23 +105,23 @@ namespace TechCatalogAdminPanel.Services.Implementations
             return airConditioner;
         }
 
-        //coocker
-        public async Task AddCoocker(CoockerBindingModel model)
+        //cooker
+        public async Task AddCooker(CookerBindingModel model)
         {
-            var coocker = mapper.Map<Coocker>(model);
+            var cooker = mapper.Map<Cooker>(model);
 
             var history = new History();
-            history.Text = "Coocker has been added.";
+            history.Text = "Cooker has been added.";
             history.CreatedOn = DateTime.Now;
 
-            await this.context.AddAsync(coocker);
+            await this.context.AddAsync(cooker);
             await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
-        public async Task DeleteCoocker(int id)
+        public async Task DeleteCooker(int id)
         {
-            var cooker = await this.context.Coockers.FirstOrDefaultAsync(c => c.Id == id);
+            var cooker = await this.context.Cookers.FirstOrDefaultAsync(c => c.Id == id);
 
             if (cooker == null)
             {
@@ -129,60 +129,60 @@ namespace TechCatalogAdminPanel.Services.Implementations
             }
 
             var history = new History();
-            history.Text = "Coocker has been deleted.";
+            history.Text = "Cooker has been deleted.";
             history.CreatedOn = DateTime.Now;
 
-            this.context.Coockers.Remove(cooker);
+            this.context.Cookers.Remove(cooker);
             await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
-        public async Task EditCoocker(CoockerEditViewModel model)
+        public async Task EditCooker(CookerEditViewModel model)
         {
-            var coocker = await this.context.Coockers.FirstOrDefaultAsync(c => c.Id == model.Id);
+            var cooker = await this.context.Cookers.FirstOrDefaultAsync(c => c.Id == model.Id);
 
-            if (coocker == null)
+            if (cooker == null)
             {
                 return;
             }
 
-            coocker.Id = model.Id;
-            coocker.Brand = model.Brand;
-            coocker.DeviceModel = model.DeviceModel;
-            coocker.Color = model.Color;
-            coocker.Image = model.Image;
-            coocker.Weight = model.Weight;
-            coocker.Warranty = model.Warranty;
-            coocker.Price = model.Price;
-            coocker.EnergyClass = model.EnergyClass;
-            coocker.Volume = model.Volume;
-            coocker.NumberOfFunctions = model.NumberOfFunctions;
-            coocker.IsTimer = model.IsTimer;
-            coocker.IsProgrammer = model.IsProgrammer;
-            coocker.IsCatalicPanel = model.IsCatalicPanel;
+            cooker.Id = model.Id;
+            cooker.Brand = model.Brand;
+            cooker.DeviceModel = model.DeviceModel;
+            cooker.Color = model.Color;
+            cooker.Image = model.Image;
+            cooker.Weight = model.Weight;
+            cooker.Warranty = model.Warranty;
+            cooker.Price = model.Price;
+            cooker.EnergyClass = model.EnergyClass;
+            cooker.Volume = model.Volume;
+            cooker.NumberOfFunctions = model.NumberOfFunctions;
+            cooker.IsTimer = model.IsTimer;
+            cooker.IsProgrammer = model.IsProgrammer;
+            cooker.IsCatalicPanel = model.IsCatalicPanel;
 
             var history = new History();
             history.Text = "Coocker has been edited.";
             history.CreatedOn = DateTime.Now;
 
-            this.context.Coockers.Update(coocker);
+            this.context.Cookers.Update(cooker);
             await this.context.Histories.AddAsync(history);
             await this.context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Coocker>> GetAllCoockers()
+        public async Task<IEnumerable<Cooker>> GetAllCookers()
         {
-            var coockers = await this.context.Coockers.ToListAsync();
+            var cookers = await this.context.Cookers.ToListAsync();
 
-            return coockers;
+            return cookers;
         }
 
-        public async Task<Coocker> GetCoockerById(int id)
+        public async Task<Cooker> GetCookerById(int id)
         {
-            var coocker = await this.context.Coockers
+            var cooker = await this.context.Cookers
                 .FirstOrDefaultAsync(a => a.Id == id);
 
-            return coocker;
+            return cooker;
         }
 
         //desktop pc

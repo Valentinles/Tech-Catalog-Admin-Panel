@@ -80,45 +80,45 @@ namespace TechCatalogAdminPanel.Web.Controllers
 
         //coocker
         [HttpGet]
-        public IActionResult AddCoocker()
+        public IActionResult AddCooker()
         {
             return this.View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddCoocker(CoockerBindingModel model)
+        public async Task<IActionResult> AddCooker(CookerBindingModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
 
-            await this.deviceService.AddCoocker(model);
+            await this.deviceService.AddCooker(model);
 
-            return RedirectToAction("AllCoockers", "Device");
+            return RedirectToAction("AllCookers", "Device");
         }
 
-        public async Task<IActionResult> AllCoockers()
+        public async Task<IActionResult> AllCookers()
         {
-            var coockers = (await this.deviceService.GetAllCoockers())
+            var cookers = (await this.deviceService.GetAllCookers())
                 .Select(mapper.Map<DeviceListingViewModel>);
 
-            return this.View(coockers);
+            return this.View(cookers);
         }
 
-        public async Task<IActionResult> DeleteCoocker(int id)
+        public async Task<IActionResult> DeleteCooker(int id)
         {
-            await this.deviceService.DeleteCoocker(id);
+            await this.deviceService.DeleteCooker(id);
 
-            return RedirectToAction("AllCoockers", "Device");
+            return RedirectToAction("AllCookers", "Device");
         }
 
         [HttpGet]
-        public async Task<IActionResult> EditCoocker(int id)
+        public async Task<IActionResult> EditCooker(int id)
         {
-            var getCoocker = await this.deviceService.GetCoockerById(id);
+            var getCoocker = await this.deviceService.GetCookerById(id);
 
-            var coocker = mapper.Map<CoockerEditViewModel>(getCoocker);
+            var coocker = mapper.Map<CookerEditViewModel>(getCoocker);
 
             if (getCoocker == null)
             {
@@ -129,11 +129,11 @@ namespace TechCatalogAdminPanel.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditCoocker(CoockerEditViewModel model)
+        public async Task<IActionResult> EditCooker(CookerEditViewModel model)
         {
-            await this.deviceService.EditCoocker(model);
+            await this.deviceService.EditCooker(model);
 
-            return RedirectToAction("AllCoockers", "Device");
+            return RedirectToAction("AllCookers", "Device");
         }
 
         //desktop pc

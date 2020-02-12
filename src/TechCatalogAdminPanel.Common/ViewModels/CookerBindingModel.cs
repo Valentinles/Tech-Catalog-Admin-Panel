@@ -6,7 +6,7 @@ using TechCatalogAdminPanel.Models.Enums;
 
 namespace TechCatalogAdminPanel.Common.ViewModels
 {
-    public class CoockerBindingModel : BaseDeviceBindingModel
+    public class CookerBindingModel : BaseDeviceBindingModel
     {
         [Required(ErrorMessage = "Select Energy Class, please!")]
         public EnergyClass EnergyClass { get; set; }

@@ -15,11 +15,11 @@ namespace TechCatalogAdminPanel.Services.Interfaces
         Task<IEnumerable<AirConditioner>> GetAllAirConditioners();
         Task<AirConditioner> GetAirConditionerById(int id);
 
-        Task AddCoocker(CoockerBindingModel model);
-        Task DeleteCoocker(int id);
-        Task EditCoocker(CoockerEditViewModel model);
-        Task<IEnumerable<Coocker>> GetAllCoockers();
-        Task<Coocker> GetCoockerById(int id);
+        Task AddCooker(CookerBindingModel model);
+        Task DeleteCooker(int id);
+        Task EditCooker(CookerEditViewModel model);
+        Task<IEnumerable<Cooker>> GetAllCookers();
+        Task<Cooker> GetCookerById(int id);
 
         Task AddDesktopPc(DesktopPcBindingModel model);
         Task DeleteDesktopPc(int id);
